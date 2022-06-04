@@ -127,7 +127,8 @@
         vertical-align:bottom;
         margin-right: 3px;
       }
-      #botonJugar{
+
+    #botonJugar{
         
         display: inline-block;
         width: 80%;
@@ -137,7 +138,7 @@
         align-items: center;
 
       }
-      #jugar{
+    #jugar{
         background-image: url(../img/Background.jpg);
         display: inline-block;
         border-width:  1px;
@@ -158,19 +159,23 @@
         flex-wrap: wrap;
         gap: 7px;
         margin-top: 10px;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
       }
 
       #teclado button{
         border: 3px outset #ffffff;
-        /*color: #FFF;*/
         font-size: 18px;
         height: 30px;
         width: 30px;
-        /*background-color: rgba(0, 0, 0, 0.5);*/
         margin: 2px;
         text-align: center;
         text-indent: -1px;
         border-radius: 8px;
+        border-color: rgba(29, 26, 26, 0.8);
+        background-color: rgba(250, 244, 244, 0.5);
+        
       }
 
       footer{
