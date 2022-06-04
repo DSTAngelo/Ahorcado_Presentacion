@@ -24,7 +24,7 @@
     }
 
     header {
-        height: 70px;
+        height: 45px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,6 +41,8 @@
         padding: 10px;
         gap: 30px;
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .container {
@@ -127,8 +129,9 @@
         margin-right: 3px;
       }
       #botonJugar{
+       display: inline-block;
         width: 80%;
-        height: 10%;
+        height: 12%;
         margin-top: 5px;
         text-align: center;
         align-items: center;
@@ -151,14 +154,15 @@
         display: flex;
         flex-wrap: wrap;
         gap: 7px;
+        margin-top: 10px;
       }
 
       #teclado button{
         border: 3px outset #96734a;
         color: #FFF;
-        font-size: 26px;
-        height: 40px;
-        width: 40px;
+        font-size: 18px;
+        height: 30px;
+        width: 30px;
         background-color: rgba(0, 0, 0, 0.5);
         margin: 2px;
         text-align: center;
