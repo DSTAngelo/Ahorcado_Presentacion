@@ -77,6 +77,7 @@ function comprobar_botones(event) {
       span("letra" + i).innerHTML = letra;
       aciertos++;
       verificador = true;
+      console.log("aciertos: " + aciertos);
     }
 
     if (aciertos == palabra.length) {
@@ -85,12 +86,12 @@ function comprobar_botones(event) {
       span("imagenGanador").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
       Inicio_de_Parametros();
-      console.log(botones_teclado);
     }
   }
   if (verificador == false) {
     errores++;
     span("imagenAhorcado").style.backgroundPosition = -(300 * errores) + "px 0";
+    console.log("errores: " + errores);
 
     if (errores == 5) {
       span("imagenAhorcado").style.display = "none";
