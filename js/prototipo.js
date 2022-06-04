@@ -4,17 +4,17 @@ function span( x ) {
 
 function cargaDePalabras(x) {
   const listado = [
-    "casa",
-    "perro",
-    "gato",
-    "elefante",
-    "gallina",
-    "vaca",
-    "loro",
-    "caballo",
-    "serpiente",
-    "conejo",
-    ];
+    "CASA",
+    "PERRO",
+    "GATO",
+    "ELEFANTE",
+    "GALLINA",
+    "VACA",
+    "LORO",
+    "CABALLO",
+    "CERDO",
+    "CONEJO",
+  ];
     
   
   palabra_Buscar = listado[Math.floor(Math.random() * (listado.length ))];
@@ -69,22 +69,34 @@ function comprobar_botones(event) {
       span("letra" + i).innerHTML = letra;
       aciertos++;
       verificador = true;
-     
     }
-  } 
-  if (verificador == false) {
-    errores++;
-    span("imagenAhorcado").style.backgroundPosition = -(300 * errores) + "px 0";
-    if (errores == 4) {
+
+    if (aciertos == palabra.length) {
+      console.log(palabra);
+      span("imagenAhorcado").style.display = "none";
+      span("imagenGanador").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
-      span("mensaje").innerHTML = "Perdiste";
-      span("imagenAhorcado").src = "/img/perdedor.png";
       botonJugar.disabled = false;
       botones_teclado.disabled = true;
     }
   }
-  console.log("verificado" + verificador);
-}
+  if (verificador == false) {
+    errores++;
+    span("imagenAhorcado").style.backgroundPosition = -(300 * errores) + "px 0";
+    
+    if (errores == 4) {
+      span("imagenAhorcado").style.display = "none";
+      span("imagenPerdedor").style.display = "flex";
+      span("palabra_adivinar").innerHTML = palabra;
+      botonJugar.disabled = false;
+      botones_teclado.disabled = true;
+    } 
+    
+    
+  }
+  }
+
+
 
 
 
