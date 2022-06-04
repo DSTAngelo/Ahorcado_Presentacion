@@ -24,11 +24,11 @@
     }
 
     header {
-        height: 45px;
+        height: 55px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 5px;
+        
         font-size: 30px;
         font-weight: bold;
         color: #fff;
@@ -129,22 +129,26 @@
         margin-right: 3px;
       }
       #botonJugar{
-       display: inline-block;
+        
+        display: inline-block;
         width: 80%;
         height: 12%;
         margin-top: 5px;
         text-align: center;
         align-items: center;
+
       }
       #jugar{
+        background-image: url(../img/Background.jpg);
         display: inline-block;
-        border: 3px;
-        
-        font-size: 20px;
+        border-width:  1px;
+        font-size: 40px;
+        color: #fff;
         height: 80%;
         width: 100%;
-       
         margin: 2px;
+        margin-top: 20px;
+        padding: 10px;
         text-align: center;
         text-indent: -1px;
         border-radius: 8px;

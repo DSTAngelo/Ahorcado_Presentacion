@@ -44,11 +44,12 @@ function InicioTeclados() {
 // FUNCION INICIAR JUEGO
 
 function comenzar() {
-  imagen.src = '../img/original_2.png';
+  cargaDePalabras();
   InicioTeclados();
+  imagen.src = '../img/original_2.png';
+  imagen.style.backgroundPosition = -(1500) + "px 0";
   aciertos = 0;
   errores = 0;
-  cargaDePalabras();
   const espaciados = span("palabra_adivinar");
   espaciados.innerHTML = "";
   palabra = palabra_Buscar;
@@ -135,24 +136,4 @@ function mostrar() {
 }
 
 window.onload = mostrar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-const letra_espacio = document.createElement("span");
-espaciados.appendChild(letra_espacio);*/
-
-
-
 
