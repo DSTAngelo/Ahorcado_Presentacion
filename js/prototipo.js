@@ -15,18 +15,16 @@ for (let i = 0; i < botones_teclado.length; i++) {
 
 // Inicio de funciones para habilitar y deshabilitar los botones primera vez
 
-function encender() {
-  window.location.reload();
-}
-
 function Inicio_de_Parametros() {
   
   const botones_teclado = document.querySelectorAll("#teclado button");
   const botones_jugar = document.querySelector("#jugar");
   for (let i = 0; i < botones_teclado.length; i++) {
-   botones_teclado[i].disabled = true;
+    botones_teclado[i].disabled = true;
+    botones_teclado[i].style.display = "none";
  }
   botones_jugar.disabled = false;
+  botones_jugar.style.display = "block";
 }
 
 function InicioTeclados() {
@@ -36,9 +34,11 @@ function InicioTeclados() {
   const botones_teclado = document.querySelectorAll("#teclado button");
   const botones_jugar = document.querySelector("#jugar");
   for (let i = 0; i < botones_teclado.length; i++) {
-   botones_teclado[i].disabled = false;
+    botones_teclado[i].disabled = false;
+    botones_teclado[i].style.display = "block";
  }
   botones_jugar.disabled = true;
+  botones_jugar.style.display = "none";
 }
 
 // FUNCION INICIAR JUEGO
