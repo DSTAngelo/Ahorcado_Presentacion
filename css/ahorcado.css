@@ -84,9 +84,11 @@
         border-style: solid;
         border-color: aliceblue;
         margin-bottom: 10px;
-        
     }
 
+    
+
+   
     #imagenGanador{
         display: none;
         background-image: url(../img/ganador.png);
@@ -105,14 +107,16 @@
    
 
      #palabra_adivinar{
-
+        display:  inline-block;
         position: absolute;
         font-size: 2em;
-        color: rgb(5, 0, 0);
+        font-weight: bold;
+        color: rgb(82, 7, 7);
         text-shadow: 10px 10px 20px rgb(187, 17, 17);
         text-align: center;
         top: 15%;
         height: 3em;
+        margin-right: 3px;
         z-index: 100
         
      }
@@ -129,7 +133,6 @@
       }
 
     #botonJugar{
-        
         display: inline-block;
         width: 80%;
         height: 12%;

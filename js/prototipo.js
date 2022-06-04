@@ -84,7 +84,6 @@ function comprobar_botones(event) {
       span("imagenAhorcado").style.display = "none";
       span("imagenGanador").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
-      botones_teclado.disabled = true;
       Inicio_de_Parametros();
       console.log(botones_teclado);
     }
@@ -97,7 +96,6 @@ function comprobar_botones(event) {
       span("imagenAhorcado").style.display = "none";
       span("imagenPerdedor").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
-      botonJugar.disabled = false;
       Inicio_de_Parametros();
     }
   }
