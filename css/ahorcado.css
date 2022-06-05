@@ -127,8 +127,7 @@
         top: 10%;
         height: 3em;
         margin-right: 3px;
-        font-family: "Melted Monster";
-        /*font-family: "BloodLust";*/
+        font-family: "Melted Monster", "BloodLust", "Nightcore Demo", "DoctorTerror";
         z-index: 100
         
      }
@@ -169,7 +168,7 @@
         text-align: center;
         text-indent: -1px;
         border-radius: 8px;
-        /*font-family: "Melted Monster";*/
+        
         font-family: "Nightcore Demo";
 
       }
