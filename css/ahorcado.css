@@ -197,8 +197,10 @@
         color: rgb(237, 242, 245);
         text-shadow: 10px 10px 20px rgb(187, 17, 17);
         text-align: center;
-        top: 21%;
-        height: 3em;
+        top: 19%;
+        height: 2em;
         margin-right: 3px;
-        z-index: 100
+        z-index: 100;
+        -webkit-text-stroke: 2px black;
+  color: transparent; 
      }
