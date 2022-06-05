@@ -3,6 +3,7 @@ let palabra = "";
 let errores = 0;
 let aciertos = 0;
 let vidas = 5;
+//let palabraRepetida = [];
 const contar = span("contador");
 
 
@@ -23,6 +24,7 @@ for (let i = 0; i < botones_teclado.length; i++) {
 function manejarTituloInicio() {
   span("tituloPrincipal").style.fontSize = "1em";
   span("tituloPrincipal").style.height = "25px";
+  span("contador").style.top = "21%";
   
 }
 
@@ -132,8 +134,48 @@ function span(x) {
 function imprimir(frase) {
   document.write(frase);
 }
+/*
+function verificarPalabraRepetida(palabra) {
+  
+  if (palabraRepetida.includes(palabra)) {
+    return true;
+
+  } else {
+    return false;
+  }
+}*/
 
 // FUNCION CARGAR DICCIONARIO
+/*
+function cargaDePalabras(x) {
+  
+  const listado = [
+    "CASA",
+    "PERRO",
+    "GATO",
+    "ELEFANTE",
+    "GALLINA",
+    "VACA",
+    "LORO",
+    "CABALLO",
+    "CERDO",
+    "CONEJO",
+  ];
+
+  palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
+  palabraRepetida = palabra_Buscar;
+  console.log(listado);
+  console.log(palabra_Buscar);
+  console.log(palabraRepetida);
+
+  if (verificarPalabraRepetida(palabraRepetida)) {
+    palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
+  }
+    return x;
+  }
+
+
+*/
 
 function cargaDePalabras(x) {
   const listado = [
@@ -152,14 +194,15 @@ function cargaDePalabras(x) {
   palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
   console.log(listado);
   console.log(palabra_Buscar);
-  
+
   if (x == palabra_Buscar) {
+    console.log(x);
     palabra_Buscar = [Math.floor(Math.random() * listado.length)];
     
-  }  
+  }
   return x;
-  console.log(x);
-}
+  
+}  
 
 // FUNCION CARGAR PARAMETROS
 

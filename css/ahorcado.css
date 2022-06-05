@@ -188,16 +188,6 @@
         color: rgb(51, 145, 199);
         text-align: center;
       }
-/*
-      #contador{
-        position: absolute;
-        font-weight: bold;
-        left: 62%;
-        display: inline-block;
-        top: 71%;
-        color: rgb(164, 206, 229);
-      }
-*/
 
       #contador{
         display:  inline-block;
@@ -207,7 +197,7 @@
         color: rgb(237, 242, 245);
         text-shadow: 10px 10px 20px rgb(187, 17, 17);
         text-align: center;
-        top: 18%;
+        top: 19%;
         height: 3em;
         margin-right: 3px;
         z-index: 100
