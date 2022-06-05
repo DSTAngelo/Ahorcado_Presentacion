@@ -21,6 +21,7 @@ function Inicio_de_Parametros() {
   
   const botones_teclado = document.querySelectorAll("#teclado button");
   const botones_jugar = document.querySelector("#jugar");
+  span("contador").style.display = "none";
   for (let i = 0; i < botones_teclado.length; i++) {
     botones_teclado[i].disabled = true;
     botones_teclado[i].style.display = "none";
