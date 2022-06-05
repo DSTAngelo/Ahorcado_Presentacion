@@ -4,11 +4,12 @@ let errores = 0;
 let aciertos = 0;
 let vidas = 5;
 const contar = span("contador");
+
+
 const imagen = span("imagenAhorcado");
 let botonJugar = document.getElementById("jugar");
 botonJugar.addEventListener('click', comenzar);
 console.log(botonJugar);
-
 
 const botones_teclado = document.querySelectorAll("#teclado button");
 for (let i = 0; i < botones_teclado.length; i++) {
@@ -17,23 +18,12 @@ for (let i = 0; i < botones_teclado.length; i++) {
 
 // Inicio de funciones para habilitar y deshabilitar los botones primera vez
 
-function Inicio_de_Parametros() {
-  
-  const botones_teclado = document.querySelectorAll("#teclado button");
-  const botones_jugar = document.querySelector("#jugar");
-  span("contador").style.display = "none";
-  for (let i = 0; i < botones_teclado.length; i++) {
-    botones_teclado[i].disabled = true;
-    botones_teclado[i].style.display = "none";
- }
-  botones_jugar.disabled = false;
-  botones_jugar.style.display = "block";
-}
+
 
 function manejarTituloInicio() {
   span("tituloPrincipal").style.fontSize = "1em";
-  span("tituloPrincipal").style.height = "30px";
-  span("tituloPrincipal").style.display = "none";
+  span("tituloPrincipal").style.height = "25px";
+  
 }
 
 function manejarTitulo() {
@@ -63,12 +53,11 @@ function InicioTeclados() {
 function comenzar() {
   cargaDePalabras();
   InicioTeclados();
+
   span("contador").style.display = "flex";
   manejarTituloInicio();
-  
   imagen.src = '../img/original_2.png';
   imagen.style.backgroundPosition = -(1500) + "px 0";
-  reiniciar = vidas;
   aciertos = 0;
   errores = 0;
   const espaciados = span("palabra_adivinar");
@@ -109,25 +98,25 @@ function comprobar_botones(event) {
       span("contador").style.display = "none";//ocultar contador
       manejarTitulo();
       Inicio_de_Parametros();
+      contar.innerHTML = vidas;
     }
+
   }
   if (verificador == false) {
     errores++;
     span("imagenAhorcado").style.backgroundPosition = -(300 * errores) + "px 0";
     console.log("errores: " + errores);
-    
-    contar.innerHTML = ((vidas - errores));
+    contar.innerHTML = vidas - errores;
     console.log("Vidas: " + (vidas - errores));
-    
 
     if (errores == 5) {
       span("imagenAhorcado").style.display = "none";
       span("imagenPerdedor").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
+      span("contador").style.display = "none"; //ocultar contador
       Inicio_de_Parametros();
-      contar.innerHTML = (vidas);
+      contar.innerHTML = vidas;
       manejarTitulo();
-      span("contador").style.display = "none";//ocultar contador
       
     }
   }
@@ -137,6 +126,11 @@ function comprobar_botones(event) {
 
 function span(x) {
   return document.getElementById(x);
+}
+
+
+function imprimir(frase) {
+  document.write(frase);
 }
 
 // FUNCION CARGAR DICCIONARIO
@@ -158,12 +152,38 @@ function cargaDePalabras(x) {
   palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
   console.log(listado);
   console.log(palabra_Buscar);
+  
+  if (x == palabra_Buscar) {
+    palabra_Buscar = [Math.floor(Math.random() * listado.length)];
+    
+  }  
   return x;
+  console.log(x);
 }
 
-function mostrar() {
+// FUNCION CARGAR PARAMETROS
+
+function Inicio_de_Parametros() {
+  span("contador").style.display = "none";
+  vidas = 5;
+  errores = 0;
+  aciertos = 0;
+
+  const botones_teclado = document.querySelectorAll("#teclado button");
+  const botones_jugar = document.querySelector("#jugar");
+
+  for (let i = 0; i < botones_teclado.length; i++) {
+    botones_teclado[i].disabled = true;
+    botones_teclado[i].style.display = "none";
+  }
+  botones_jugar.disabled = false;
+  botones_jugar.style.display = "block";
+}
+
+
+function activacionInicial() {
   Inicio_de_Parametros();
 }
 
-window.onload = mostrar;
+window.onload = activacionInicial;
 
