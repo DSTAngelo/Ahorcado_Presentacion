@@ -2,6 +2,8 @@
 let palabra = "";
 let errores = 0;
 let aciertos = 0;
+let vidas = 5;
+const contar = span("contador");
 const imagen = span("imagenAhorcado");
 let botonJugar = document.getElementById("jugar");
 botonJugar.addEventListener('click', comenzar);
@@ -46,8 +48,10 @@ function InicioTeclados() {
 function comenzar() {
   cargaDePalabras();
   InicioTeclados();
+  span("contador").style.display = "flex";
   imagen.src = '../img/original_2.png';
   imagen.style.backgroundPosition = -(1500) + "px 0";
+  reiniciar = vidas;
   aciertos = 0;
   errores = 0;
   const espaciados = span("palabra_adivinar");
@@ -85,6 +89,7 @@ function comprobar_botones(event) {
       span("imagenAhorcado").style.display = "none";
       span("imagenGanador").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
+      span("contador").style.display = "none";//ocultar contador
       Inicio_de_Parametros();
     }
   }
@@ -92,12 +97,18 @@ function comprobar_botones(event) {
     errores++;
     span("imagenAhorcado").style.backgroundPosition = -(300 * errores) + "px 0";
     console.log("errores: " + errores);
+    
+    contar.innerHTML = ("Intento N°: " + (vidas - errores));
+    console.log("Vidas: " + (vidas - errores));
+    
 
     if (errores == 5) {
       span("imagenAhorcado").style.display = "none";
       span("imagenPerdedor").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
       Inicio_de_Parametros();
+      contar.innerHTML = "Intento N°: " + (vidas);
+      span("contador").style.display = "none";
     }
   }
 }
