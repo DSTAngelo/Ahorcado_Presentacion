@@ -107,7 +107,7 @@ function comprobar_botones(event) {
       span("imagenPerdedor").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
       Inicio_de_Parametros();
-      contar.innerHTML = "Intento N°: " + (vidas);
+      contar.innerHTML = (vidas);
       span("contador").style.display = "none";
     }
   }

@@ -161,8 +161,8 @@
       #teclado{
         display: flex;
         flex-wrap: wrap;
-        gap: 7px;
-        margin-top: 5px;
+        gap: 1px;
+        margin-top: 2px;
         align-items: center;
         margin: auto;
         justify-content: center;
@@ -195,7 +195,7 @@
       #contador{
         position: absolute;
         font-weight: bold;
-        left: 64%;
+        left: 42%;
         display: inline-block;
         top: 71%;
         color: rgb(164, 206, 229);
