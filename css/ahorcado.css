@@ -17,6 +17,12 @@
 
        font-family:"Melted Monster";
        src: url(../fonts/MeltedMonster.ttf);
+
+       font-family:"BloodLust";
+       src: url(../fonts/BloodLust.ttf);
+
+       font-family:"Nightcore Demo";
+       src: url(../fonts/NightcoreDemo.ttf);
      }
 
     body {
@@ -122,6 +128,7 @@
         height: 3em;
         margin-right: 3px;
         font-family: "Melted Monster";
+        /*font-family: "BloodLust";*/
         z-index: 100
         
      }
@@ -162,7 +169,8 @@
         text-align: center;
         text-indent: -1px;
         border-radius: 8px;
-        font-family: "Melted Monster";
+        /*font-family: "Melted Monster";*/
+        font-family: "Nightcore Demo";
 
       }
 
@@ -187,6 +195,7 @@
         border-radius: 8px;
         border-color: rgba(29, 26, 26, 0.8);
         background-color: rgba(250, 244, 244, 0.5);
+        font-family: "Melted Monster";
         
       }
 
