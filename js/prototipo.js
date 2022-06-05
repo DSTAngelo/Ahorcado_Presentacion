@@ -98,7 +98,7 @@ function comprobar_botones(event) {
     span("imagenAhorcado").style.backgroundPosition = -(300 * errores) + "px 0";
     console.log("errores: " + errores);
     
-    contar.innerHTML = ("Intento N°: " + (vidas - errores));
+    contar.innerHTML = ((vidas - errores));
     console.log("Vidas: " + (vidas - errores));
     
 
