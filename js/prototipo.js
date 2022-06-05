@@ -32,11 +32,13 @@ function Inicio_de_Parametros() {
 function manejarTituloInicio() {
   span("tituloPrincipal").style.fontSize = "1em";
   span("tituloPrincipal").style.height = "30px";
+  span("tituloPrincipal").style.display = "none";
 }
 
 function manejarTitulo() {
   span("tituloPrincipal").style.fontSize = "28px";
   span("tituloPrincipal").style.height = "45px";
+  span("tituloPrincipal").style.display = "flex";
 }
 
 
