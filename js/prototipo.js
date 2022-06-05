@@ -49,6 +49,8 @@ function comenzar() {
   cargaDePalabras();
   InicioTeclados();
   span("contador").style.display = "flex";
+  span("tituloPrincipal").style.fontSize = "1em";
+  span("tituloPrincipal").style.height = "30px";
   imagen.src = '../img/original_2.png';
   imagen.style.backgroundPosition = -(1500) + "px 0";
   reiniciar = vidas;
@@ -90,6 +92,7 @@ function comprobar_botones(event) {
       span("imagenGanador").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
       span("contador").style.display = "none";//ocultar contador
+      span("tituloPrincipal").style.display = "flex";//mostrar titulo
       Inicio_de_Parametros();
     }
   }
@@ -108,7 +111,8 @@ function comprobar_botones(event) {
       span("palabra_adivinar").innerHTML = palabra;
       Inicio_de_Parametros();
       contar.innerHTML = (vidas);
-      span("contador").style.display = "none";
+      span("contador").style.display = "flex";
+      
     }
   }
 }
