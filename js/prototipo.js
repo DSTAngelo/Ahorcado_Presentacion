@@ -29,6 +29,18 @@ function Inicio_de_Parametros() {
   botones_jugar.style.display = "block";
 }
 
+function manejarTituloInicio() {
+  span("tituloPrincipal").style.fontSize = "1em";
+  span("tituloPrincipal").style.height = "30px";
+}
+
+function manejarTitulo() {
+  span("tituloPrincipal").style.fontSize = "28px";
+  span("tituloPrincipal").style.height = "45px";
+}
+
+
+
 function InicioTeclados() {
   span("imagenPerdedor").style.display = "none";
   span("imagenGanador").style.display = "none";
@@ -49,8 +61,8 @@ function comenzar() {
   cargaDePalabras();
   InicioTeclados();
   span("contador").style.display = "flex";
-  span("tituloPrincipal").style.fontSize = "1em";
-  span("tituloPrincipal").style.height = "30px";
+  manejarTituloInicio();
+  
   imagen.src = '../img/original_2.png';
   imagen.style.backgroundPosition = -(1500) + "px 0";
   reiniciar = vidas;
@@ -92,7 +104,7 @@ function comprobar_botones(event) {
       span("imagenGanador").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
       span("contador").style.display = "none";//ocultar contador
-      span("tituloPrincipal").style.display = "flex";//mostrar titulo
+      manejarTitulo();
       Inicio_de_Parametros();
     }
   }
@@ -111,7 +123,8 @@ function comprobar_botones(event) {
       span("palabra_adivinar").innerHTML = palabra;
       Inicio_de_Parametros();
       contar.innerHTML = (vidas);
-      span("contador").style.display = "flex";
+      manejarTitulo();
+      span("contador").style.display = "none";//ocultar contador
       
     }
   }
