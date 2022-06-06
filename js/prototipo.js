@@ -17,8 +17,6 @@ for (let i = 0; i < botones_teclado.length; i++) {
 // Inicio de funciones para habilitar y deshabilitar los botones primera vez
 
 function manejarTituloInicio() {
-//  span("tituloPrincipal").style.fontSize = "1em";
-//  span("tituloPrincipal").style.height = "25px";
   span("contador").style.top = "21%";
 }
 
