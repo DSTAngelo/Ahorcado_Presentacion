@@ -1,15 +1,12 @@
-
 let palabra = "";
 let errores = 0;
 let aciertos = 0;
 let vidas = 5;
-//let palabraRepetida = [];
+
 const contar = span("contador");
-
-
 const imagen = span("imagenAhorcado");
 let botonJugar = document.getElementById("jugar");
-botonJugar.addEventListener('click', comenzar);
+botonJugar.addEventListener("click", comenzar);
 console.log(botonJugar);
 
 const botones_teclado = document.querySelectorAll("#teclado button");
@@ -19,13 +16,10 @@ for (let i = 0; i < botones_teclado.length; i++) {
 
 // Inicio de funciones para habilitar y deshabilitar los botones primera vez
 
-
-
 function manejarTituloInicio() {
   span("tituloPrincipal").style.fontSize = "1em";
   span("tituloPrincipal").style.height = "25px";
   span("contador").style.top = "21%";
-  
 }
 
 function manejarTitulo() {
@@ -33,8 +27,6 @@ function manejarTitulo() {
   span("tituloPrincipal").style.height = "45px";
   span("tituloPrincipal").style.display = "flex";
 }
-
-
 
 function InicioTeclados() {
   span("imagenPerdedor").style.display = "none";
@@ -45,7 +37,7 @@ function InicioTeclados() {
   for (let i = 0; i < botones_teclado.length; i++) {
     botones_teclado[i].disabled = false;
     botones_teclado[i].style.display = "block";
- }
+  }
   botones_jugar.disabled = true;
   botones_jugar.style.display = "none";
 }
@@ -55,11 +47,10 @@ function InicioTeclados() {
 function comenzar() {
   cargaDePalabras();
   InicioTeclados();
-
   span("contador").style.display = "flex";
   manejarTituloInicio();
-  imagen.src = '../img/original_2.png';
-  imagen.style.backgroundPosition = -(1500) + "px 0";
+  imagen.src = "../img/original_2.png";
+  imagen.style.backgroundPosition = -1500 + "px 0";
   aciertos = 0;
   errores = 0;
   const espaciados = span("palabra_adivinar");
@@ -70,20 +61,18 @@ function comenzar() {
   for (let i = 0; i < espacios; i++) {
     espaciados.innerHTML += "<span id='letra" + i + "'></span>";
   }
+  autoplayer();
 }
-
-
 
 // FUNCION COMPROBAR BOTONES
 
 function comprobar_botones(event) {
-  
   const botones_teclado = event.target;
   botones_teclado.disabled = true;
 
   const letra = this.innerHTML;
   let verificador = false;
-  
+
   for (let i = 0; i < palabra.length; i++) {
     if (letra == palabra[i]) {
       span("letra" + i).innerHTML = letra;
@@ -97,12 +86,11 @@ function comprobar_botones(event) {
       span("imagenAhorcado").style.display = "none";
       span("imagenGanador").style.display = "flex";
       span("palabra_adivinar").innerHTML = palabra;
-      span("contador").style.display = "none";//ocultar contador
+      span("contador").style.display = "none"; //ocultar contador
       manejarTitulo();
       Inicio_de_Parametros();
       contar.innerHTML = vidas;
     }
-
   }
   if (verificador == false) {
     errores++;
@@ -119,7 +107,7 @@ function comprobar_botones(event) {
       Inicio_de_Parametros();
       contar.innerHTML = vidas;
       manejarTitulo();
-      
+      silenciar();
     }
   }
 }
@@ -130,52 +118,34 @@ function span(x) {
   return document.getElementById(x);
 }
 
+// FUNCION IMPRIMIR TEXTO
 
 function imprimir(frase) {
   document.write(frase);
 }
-/*
-function verificarPalabraRepetida(palabra) {
-  
-  if (palabraRepetida.includes(palabra)) {
-    return true;
+/*----------------MANEJO DE AUDIO --------------------------------------*/
 
-  } else {
-    return false;
-  }
-}*/
-
-// FUNCION CARGAR DICCIONARIO
-/*
-function cargaDePalabras(x) {
-  
-  const listado = [
-    "CASA",
-    "PERRO",
-    "GATO",
-    "ELEFANTE",
-    "GALLINA",
-    "VACA",
-    "LORO",
-    "CABALLO",
-    "CERDO",
-    "CONEJO",
-  ];
-
-  palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
-  palabraRepetida = palabra_Buscar;
-  console.log(listado);
-  console.log(palabra_Buscar);
-  console.log(palabraRepetida);
-
-  if (verificarPalabraRepetida(palabraRepetida)) {
-    palabra_Buscar = listado[Math.floor(Math.random() * listado.length)];
-  }
-    return x;
-  }
+function autoplayer() {
+  var sound = new Howl({
+    src: ["../audio/terror.mp3"],
+    volume: 0.1,
+    onend: function () {
+      alert("Hemos terminado el juego");
+    },
+  });
+  sound.play();
+}
 
 
-*/
+function silenciar() {
+  var sound = new Howl({
+    src: ["../audio/terror.mp3"],
+    volume: 0.0,
+  });
+  sound.pause();
+}
+
+//----------------------------------------------------------------
 
 function cargaDePalabras(x) {
   const listado = [
@@ -198,16 +168,15 @@ function cargaDePalabras(x) {
   if (x == palabra_Buscar) {
     console.log(x);
     palabra_Buscar = [Math.floor(Math.random() * listado.length)];
-    
   }
   return x;
-  
-}  
+}
 
-// FUNCION CARGAR PARAMETROS
+// FUNCION CARGAR PARAMETROS -----------------------------------------//
 
 function Inicio_de_Parametros() {
   span("contador").style.display = "none";
+
   vidas = 5;
   errores = 0;
   aciertos = 0;
@@ -223,10 +192,9 @@ function Inicio_de_Parametros() {
   botones_jugar.style.display = "block";
 }
 
+// ------------------FUNCION INICIAR JUEGO------------------------------ //
 
 function activacionInicial() {
   Inicio_de_Parametros();
 }
-
 window.onload = activacionInicial;
-
