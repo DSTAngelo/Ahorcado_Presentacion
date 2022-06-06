@@ -130,7 +130,7 @@ function autoplayer() {
     src: ["../audio/terror.mp3"],
     volume: 0.1,
     onend: function () {
-      alert("Hemos terminado el juego");
+      
     },
   });
   sound.play();
