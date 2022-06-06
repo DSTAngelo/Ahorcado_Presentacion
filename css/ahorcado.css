@@ -221,12 +221,14 @@ footer {
   text-align: center;
 }
 
+/******************************------------------******************************/
+
 @media only screen and (min-width: 760px )  /*Probado en ipad 768 x 1024 */
 
 {
 
   body {
-  margin: 50px 5px 5px 50px;
+  margin: auto;
   }
 
 header {
@@ -291,14 +293,15 @@ main {
   margin: 3px;
   text-indent: -1px;
   border-radius: 10px;
+  color: rgba(14, 0, 0, 0.7);
   
 }
 
 #contador {
   font-size: 84px;
   font-weight: bold;
-  margin-top: 44%;
-  margin-left: 63%;
+  margin-top: 38%;
+  margin-left: 66%;
 }
 
 footer {
