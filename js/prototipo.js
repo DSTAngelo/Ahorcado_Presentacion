@@ -99,6 +99,8 @@ function comprobar_botones(event) {
     contar.innerHTML = vidas - errores;
     console.log("Vidas: " + (vidas - errores));
 
+    
+
     if (errores == 5) {
       span("imagenAhorcado").style.display = "none";
       span("imagenPerdedor").style.display = "flex";

@@ -245,11 +245,12 @@ section {
   padding: auto;
   border: 2px solid rgb(211, 208, 208);
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);  
+  transition-duration: 2s;
 }
 
 .container {
- 
+  transition-duration: 2s;
 }
 
 #imagenAhorcado {
@@ -257,13 +258,21 @@ section {
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 50px;
+ 
 }
 
 #imagenPerdedor {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 50px;
+  
 }
 
 #imagenGanador {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 50px;
 }
 
