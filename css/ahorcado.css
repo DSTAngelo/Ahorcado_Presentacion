@@ -28,17 +28,19 @@
 body {
   background-image: url(../img/Background.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   margin: 0;
+  /*width: 100%;*/
   min-height: 100vh;
+  height: 100%;
  /* overflow-y:hidden;*/
   align-items: center;
- /* -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;*/
+ -webkit-text-size-adjust: 100%;          /* optional */
+  -webkit-font-smoothing: antialiased;   /* opcionales */
 }
 
 header {
-  height: 20px;
+  height: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +52,7 @@ header {
 
 main {
   width: 80%;
+  height: 100%;
   margin: auto;
   padding: 5px;
   gap: 30px;
