@@ -1,0 +1,281 @@
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  align-items: center;
+
+   background-repeat: no-repeat;
+  background-size: auto;
+  
+  height: 100%;
+ /* overflow-y:hidden;*/
+  align-items: center;
+ 
+}
+
+header {
+  position: absolute; height: 20%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 5px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section{
+  position: absolute; width: 80%; height: 90%; top: 3%;
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+}
+
+#imagenAhorcado {
+  background-image: url(../img/Original_2.png);
+  width: 100%;
+  position: absolute; top: 1%; left: 1%;
+  align-items: center;
+  height: 500px;
+  width: 300px;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  border-radius: 5px;
+  border-width: 5px 5px 5px;
+  border-style: solid;
+  border-color: aliceblue;
+}
+
+#imagenPerdedor {
+  display: none;
+  background-image: url(../img/perdedor_1.png);
+   width: 100%;
+  position: absolute; top: 1%; left: 1%;
+  align-items: center;
+  height: 500px;
+  width: 300px;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  border-radius: 5px;
+  border-width: 5px 5px 5px;
+  border-style: solid;
+  border-color: aliceblue;
+  margin-bottom: 10px;
+}
+
+#imagenGanador {
+  display: none;
+  background-image: url(../img/ganador.png);
+  width: 100%;
+  position: absolute; top: 1%; left: 1%;
+  align-items: center;
+  height: 500px;
+  width: 300px;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  border-radius: 5px;
+  border-width: 5px 5px 5px;
+  border-style: solid;
+  border-color: aliceblue;
+}
+
+#palabra_adivinar {
+  display: inline-block;
+  position: absolute;
+  font-size: 2em;
+  color: rgb(82, 7, 7);
+  text-shadow: 10px 10px 20px rgb(187, 17, 17);
+  text-align: center;
+  top: 10%;
+  height: 3em;
+  margin-right: 3px;
+  font-family: "Melted Monster", "BloodLust", "Nightcore Demo", "DoctorTerror";
+  z-index: 100;
+}
+
+#palabra_adivinar span {
+  font-size: 1.5em;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+  width: 30px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 3px;
+}
+
+#botonJugar {
+  display: block;
+  position: absolute; 
+  width: 100%;
+  top: 84%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+#jugar {
+  position: absolute; width: 40%;
+  font-size: 40px;
+
+}
+
+#teclado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-top: 2px;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+#teclado button {
+  border: 3px outset #ffffff;
+  font-size: 18px;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  text-align: center;
+  text-indent: -1px;
+  border-radius: 8px;
+  border-color: rgba(29, 26, 26, 0.8);
+  background-color: rgba(250, 244, 244, 0.5);
+  font-family: "Melted Monster", "BloodLust", "Helvetica Neue", Helvetica, Arial,
+    "DoctorTerror";
+}
+
+#contador {
+  display: inline-flex;
+  position: absolute; top: 10%; left: 5%;
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(237, 242, 245);
+  text-shadow: 10px 10px 20px rgb(187, 17, 17);
+  text-align: center;
+  -webkit-text-stroke: 2px rgb(250, 246, 246);
+  color: transparent;
+  z-index: 10;
+}
+
+footer {
+  top: 94%;
+  left: 10%;
+  width: 80%;
+  height: 5%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(51, 145, 199);
+  text-align: center;
+}
+
+/******************************------------------******************************/
+
+@media only screen and (min-width: 1280px) /*Probado en ipad orientation: landscape*/
+
+{
+
+  body {margin: auto;}
+
+  header {height: 22%;}
+
+.container {
+  transition-duration: 2s;
+}
+
+#imagenAhorcado {
+  margin-top: 25px; margin-left: 30px; margin-right: 30px; margin-bottom: 2%;
+}
+
+#imagenPerdedor {
+  margin-top: 25px; margin-left: 30px; margin-right: 30px; margin-bottom: 2%;
+}
+
+#imagenGanador {
+  margin-top: 25px; margin-left: 30px; margin-right: 30px;  margin-bottom: 2%;
+}
+
+#palabra_adivinar { top: 8%;}
+
+
+#botonJugar {  width: 80%; margin-top: 5px; margin-bottom: 30px;}
+
+
+#jugar {
+  border-width: 2px;  font-size: 50px;  margin: 2px;  margin-top: 2px;  margin-bottom: 2px;
+}
+
+#teclado { position: absolute; margin-top: 3%; gap: 2px;  margin-left: 1%;
+  margin-right: 1%;}
+
+#teclado button {
+  border: 4px outset #ffffff; font-size: 24px; height: 38px; width: 38px;
+  margin: 3px; margin-bottom: 10px; text-indent: -1px; border-radius: 10px;
+}
+
+#contador {
+  font-size: 180px;  font-weight: bold; margin-top: 7%; margin-left: 43%;
+}
+
+footer {
+  position: absolute; margin-top: 0%; top: 95%; width: 100%;  height: 5%;  font-size: 30px;
+}
+
+}
+/******************************------------------******************************/
+
+@media only screen and (min-width: 1366px) { /*Probado en ipad orientation: landscape*/
+
+  body {margin: auto;}
+
+  header {height: 10%;}
+
+.container {
+  transition-duration: 2s;
+}
+
+#imagenAhorcado {
+  margin-top: 25px; margin-left: 30px; margin-right: 30px; margin-bottom: 2%;
+}
+
+#imagenPerdedor {
+  margin-top: 25px; margin-left: 30px; margin-right: 30px; margin-bottom: 2%;
+}
+
+#imagenGanador {
+  margin-top: 25px; margin-left: 30px; margin-right: 30px;  margin-bottom: 2%;
+}
+
+#palabra_adivinar { top: 8%;}
+
+
+#botonJugar {  width: 80%; margin-bottom: 30px;}
+
+
+#jugar {
+  border-width: 2px;  font-size: 50px;  margin: 2px;  margin-top: 2px;  margin-bottom: 2px;
+}
+
+#teclado { position: absolute; margin-top: 3%; gap: 2px;  margin-left: 1%;
+  margin-right: 1%;}
+
+#teclado button {
+  border: 4px outset #ffffff; font-size: 24px; height: 38px; width: 38px;
+  margin: 3px; margin-bottom: 10px; text-indent: -1px; border-radius: 10px;
+}
+
+#contador {
+  font-size: 180px;  font-weight: bold; margin-top: 7%; margin-left: 43%;
+}
+
+footer {
+  position: absolute; margin-top: 0%; top: 95%; width: 100%;  height: 5%;  font-size: 30px;
+}}
+
